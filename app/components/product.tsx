@@ -26,7 +26,9 @@ const Product = () => {
                 height={800}
                 width={800}
                 alt='sofa'
-                className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                //className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
+
               />
               <div className='mt-4 text-[#2A254B]'>
                 <p className='py-2'>The popular suede sofa</p>
@@ -41,7 +43,9 @@ const Product = () => {
                 height={800}
                 width={800}
                 alt='chair'
-                className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                //className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
+
               />
               <div className='mt-4 text-[#2A254B]'>
                 <p className='py-2'>The Dandy chair</p>
@@ -56,7 +60,9 @@ const Product = () => {
                 height={900}
                 width={900}
                 alt='chair'
-                className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                //className='w-full h-[80%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
+
               />
               <div className='mt-4 text-[#2A254B]'>
                 <p className='py-2'>The Dandy chair</p>
@@ -68,7 +74,7 @@ const Product = () => {
 
           {/* View Collection Button */}
           <div className='my-10 flex justify-center items-center'>
-            <button className='bg-[#F9F9F9] py-4 px-6 rounded-[5px] text-[#2A254B]' onClick={handleNavigation}>
+          <button onClick={handleNavigation} className="bg-[#F9F9F9] py-4 px-6 rounded-[5px] text-[#2A254B] transition-all duration-300 ease-in-out hover:bg-[#2A254B] hover:text-[#F9F9F9] hover:scale-105 hover:shadow-md">
               View products
             </button>
           </div>

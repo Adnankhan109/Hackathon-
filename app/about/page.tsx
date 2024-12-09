@@ -1,7 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+'use client'
+import React from 'react'
+import { useRouter } from 'next/navigation';
 
 const About = () => {
+  const router = useRouter();
+
+     const handleNavigation = () => {
+    router.push('/productlisting'); // Navigates to the "/about" page
+  };
   return (
     <div>
       {/* Hero Section */}
@@ -10,38 +17,45 @@ const About = () => {
           A brand built on the love of craftsmanship, quality, and outstanding customer service
         </div>
         <div className="mt-6 md:mt-0">
-          <button className="bg-gray-200 h-12 w-40 rounded-sm text-custom-purple">
+          <button onClick={handleNavigation} className="bg-gray-200 h-12 w-40 rounded-sm text-custom-purple">
             View our products
           </button>
         </div>
       </div>
 
       {/* Story Section */}
-      <div className="flex flex-col md:flex-row w-full h-auto items-center justify-around px-4 py-16">
-        <div className="bg-custom-purple w-full md:w-2/5 text-white p-8 md:p-16 mb-8 md:mb-0">
+      
+      <div className="flex flex-col md:flex-row w-full h-auto gap-4 justify-center py-16">
+      {/* Content Div */}
+      <div className="bg-custom-purple w-full md:w-2/5 text-white p-8 md:p-16 mb-8 md:mb-0 flex items-center">
+        <div>
           <h1 className="text-xl md:text-2xl">It started with a small idea</h1>
           <p className="mt-6">
             A global brand with local beginnings, our story began in a small studio in South London in early 2014.
           </p>
-          <button className="bg-input-bg h-12 w-40 rounded-sm mt-10 text-white">
+          <button onClick={handleNavigation} className="bg-input-bg h-12 w-40 rounded-sm mt-10 text-white">
             View Collection
           </button>
         </div>
-        <div className="w-full md:w-2/5">
+      </div>
+
+        {/* Image Div */}
+        <div className="w-full md:w-2/5 flex">
           <img
             src="/images/About main.png"
             alt="About main"
-            className="w-full transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+            className="w-full h-auto md:h-full object-cover"
           />
         </div>
       </div>
 
+
       {/* Service Section */}
-      <div className="flex flex-col md:flex-row w-full h-auto items-center px-4 py-16 space-y-8 md:space-y-0">
+      <div className="flex flex-col md:flex-row w-full h-auto items-center  space-y-8 md:space-y-0">
         <img
           src="/images/About second.png"
           alt="Service"
-          className="w-full md:w-2/5 transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+          className="w-full md:w-2/5 h-[435px]"
         />
         <div className="border-2 bg-slate-200 w-full md:w-3/5 p-8 md:p-20">
           <h1 className="text-xl md:text-2xl text-custom-purple">

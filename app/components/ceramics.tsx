@@ -1,7 +1,13 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
+import { useRouter } from 'next/navigation';
 
 const Ceramics = () => {
+  const router = useRouter();
+  const handleNavigation = () => {
+    router.push('/productlisting'); // Navigates to the "/about" page
+  };
   return (
     <>
       <section>
@@ -13,13 +19,21 @@ const Ceramics = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
             {/* Product 1 */}
             <div className="w-full h-auto">
-              <Image
+              {/* <Image
                 src={'/images/chair.png'}
                 height={700}
                 width={700}
                 alt="chair"
                 className="w-full h-[80%] object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              /> */}
+              <Image
+                src={'/images/chair.png'}
+                height={700}
+                width={700}
+                alt="chair"
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
               />
+
               <div className="mt-4 text-[#2A254B]">
                 <p className="py-2">The Dendy Chair</p>
                 <p>$250</p>
@@ -33,7 +47,7 @@ const Ceramics = () => {
                 height={700}
                 width={700}
                 alt="vase"
-                className="w-full h-[80%] object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
               />
               <div className="mt-4 text-[#2A254B]">
                 <p className="py-2">Rustic VaseSet</p>
@@ -48,7 +62,7 @@ const Ceramics = () => {
                 height={700}
                 width={700}
                 alt="silky vase"
-                className="w-full h-[80%] object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
               />
               <div className="mt-4 text-[#2A254B]">
                 <p className="py-2">The Silky Vase</p>
@@ -63,7 +77,7 @@ const Ceramics = () => {
                 height={700}
                 width={700}
                 alt="lamp"
-                className="w-full h-[80%] object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+                className="w-full h-[80%] object-cover transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-1 hover:border-4 hover:border-[#4E4D93] hover:shadow-lg"
               />
               <div className="mt-4 text-[#2A254B]">
                 <p className="py-2">The Lucky Lamp</p>
@@ -74,7 +88,7 @@ const Ceramics = () => {
 
           {/* View Collection Button */}
           <div className="my-10 flex justify-center items-center">
-            <button className="bg-[#F9F9F9] py-4 px-6 rounded-[5px] text-[#2A254B]">
+          <button onClick={handleNavigation} className="bg-[#F9F9F9] py-4 px-6 rounded-[5px] text-[#2A254B] transition-all duration-300 ease-in-out hover:bg-[#2A254B] hover:text-[#F9F9F9] hover:scale-105 hover:shadow-md">
               View collection
             </button>
           </div>

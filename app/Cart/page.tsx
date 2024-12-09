@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 
 const Cart = () => {
   return (
-    <><Navbar /><div>
+    <><div>
       <div className="bg-gray-200 w-full px-4 sm:px-10 lg:px-40 pt-10 pb-16 h-auto text-custom-purple">
         <h1 className="text-2xl sm:text-3xl text-center lg:text-left">
           Your Shopping Cart
@@ -65,7 +65,7 @@ const Cart = () => {
           </div>
 
           {/* Total Section (Hidden on Small Screens) */}
-          <div className="border-2 p-4 sm:hidden lg:block">
+          <div className="border-2 p-4 hidden lg:block">
             <h1 className="text-lg font-semibold">Total</h1>
             <p className="mt-10 text-lg font-medium">£85</p>
             <p className="mt-40 text-lg font-medium">£85</p>

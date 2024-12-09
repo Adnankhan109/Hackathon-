@@ -23,7 +23,8 @@ const Touch = () => {
                 </h1>
               </div>
               <div className="my-10">
-                <button className="bg-[#F9F9F9] py-4 px-4 rounded-[5px] text-[#2A254B]">
+                
+                <button className="bg-[#F9F9F9] py-4 px-6 rounded-[5px] text-[#2A254B] transition-all duration-300 ease-in-out hover:bg-[#2A254B] hover:text-[#F9F9F9] hover:scale-105 hover:shadow-md"> 
                   Get in touch
                 </button>
               </div>
@@ -35,7 +36,7 @@ const Touch = () => {
                 height={800}
                 width={800}
                 alt="chair"
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-2"
+                className="w-full h-full "
               />
             </div>
           </div>

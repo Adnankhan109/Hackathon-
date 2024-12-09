@@ -6,8 +6,8 @@ const Hero = () => {
     <>
       <section>
         <div className='px-8 py-12'>
-          <div className='flex flex-col md:flex-row'>
-            <div className='w-full md:w-[60%] h-auto md:h-[580px] border border-black bg-[#2A254B] text-white px-4 md:px-12 py-6 md:py-12 flex flex-col justify-between'>
+          <div className='flex  flex-col md:flex-row '>
+            <div className='w-full md:w-[60%] h-auto  border border-black bg-[#2A254B] text-white px-4 md:px-12 py-6 md:py-12 flex flex-col justify-between'>
               <div>
                 <h1 className='text-xl md:text-3xl md:text-left'>
                   The furniture brand for the future with <br /> the timeless designs
@@ -28,8 +28,14 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className='w-full md:w-[40%] h-auto md:h-[580px] bg-white flex justify-center items-end'>
-              <Image src={'/images/rightt.png'} width={400} height={400} alt='right' />
+            <div className="w-full md:w-[40%] h-auto bg-white flex items-end hidden md:flex">
+
+              <Image src={'/images/main chiar.png'} 
+              width={600} 
+              height={400} 
+              alt='main chiar'
+               className='md:h-[500px]'
+              />
             </div>
           </div>
         </div>

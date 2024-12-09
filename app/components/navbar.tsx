@@ -18,7 +18,7 @@ const Navbar = () => {
       {/* Top Section */}
       <div className="flex justify-between items-center py-2">
         {/* Search Icon for Large Screens (Tablet and above) */}
-        <div className="sm:hidden md:block">
+        <div className="hidden md:block">
           <CiSearch size={25} className="text-[#2A254B]" />
         </div>
 
@@ -28,7 +28,7 @@ const Navbar = () => {
         </h1>
 
         {/* Cart and Contact Icons for Large Screens */}
-        <div className="sm:hidden md:flex gap-4">
+        <div className="hidden md:flex gap-4">
           <Link href="/Cart">
             <IoCartOutline size={25} className="text-[#2A254B]" />
           </Link>
@@ -60,16 +60,28 @@ const Navbar = () => {
               className="text-2xl focus:outline-none"
               onClick={toggleMenu}
             >
-              <IoClose />
+              
             </button>
           </div>
         )}
 
         <ul className="flex flex-col md:flex-row justify-center items-start md:items-center gap-4 md:gap-8 text-[#726E8D] text-base p-6 md:p-0">
           {['Plant pots', 'Ceramics', 'Tables', 'Chairs', 'Crockery', 'Tableware', 'Cutlery'].map((item) => (
-            <li key={item}>
-              <a href="/">{item}</a>
-            </li>
+            // <li className='' key={item}>
+            //   <a href="/">{item}</a>
+            // </li>
+            <li className="relative group" key={item}>
+  <a 
+    href="/" 
+    className="text-gray-800 hover:text-black transition-colors duration-300"
+  >
+    {item}
+    <span 
+      className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"
+    ></span>
+  </a>
+</li>
+
           ))}
           
         </ul>
